@@ -28,7 +28,7 @@ export default function MedicareOpenEnrollmentPage() {
           </div>
 
           <div className="max-w-3xl mx-auto mb-16 text-center">
-            <h2 className="text-3xl font-bold mb-6 text-gray-900">We're Here to Help</h2>
+            <h2 className="text-3xl font-bold mb-6 text-gray-900">We&apos;re Here to Help</h2>
             <p className="text-lg text-gray-600">
               Choosing a Medicare plan can be confusing. Our pharmacists and staff are trained to help 
               you understand your options and find a plan that covers your medications and fits your budget.
@@ -71,7 +71,7 @@ export default function MedicareOpenEnrollmentPage() {
               </div>
               <h3 className="text-2xl font-bold mb-4 text-gray-900">Cost Analysis</h3>
               <p className="text-gray-600 mb-4">
-                We'll help you understand the true cost of each plan:
+                We&apos;ll help you understand the true cost of each plan:
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start">
@@ -84,7 +84,7 @@ export default function MedicareOpenEnrollmentPage() {
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Coverage gap ("donut hole")</span>
+                    <span className="text-gray-700">Coverage gap (&quot;donut hole&quot;)</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
@@ -99,7 +99,7 @@ export default function MedicareOpenEnrollmentPage() {
               </div>
               <h3 className="text-2xl font-bold mb-4 text-gray-900">Formulary Review</h3>
               <p className="text-gray-600 mb-4">
-                We'll check if your medications are covered:
+                We&apos;ll check if your medications are covered:
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start">
@@ -127,7 +127,7 @@ export default function MedicareOpenEnrollmentPage() {
               </div>
               <h3 className="text-2xl font-bold mb-4 text-gray-900">Ongoing Support</h3>
               <p className="text-gray-600 mb-4">
-                Our support doesn't end after enrollment:
+                Our support doesn&apos;t end after enrollment:
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start">
@@ -196,7 +196,7 @@ export default function MedicareOpenEnrollmentPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Schedule Your Free Medicare Consultation</h2>
           <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-            Don't navigate Medicare alone. Let our experts help you find the right plan.
+            Don&apos;t navigate Medicare alone. Let our experts help you find the right plan.
           </p>
           <Link href="/contact" className="inline-block bg-white text-primary-700 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-all">
             Book Consultation

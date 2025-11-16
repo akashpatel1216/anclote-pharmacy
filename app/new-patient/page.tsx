@@ -78,7 +78,7 @@ export default function NewPatientPage() {
           <div className="max-w-4xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">New Patient Registration</h1>
             <p className="text-xl text-primary-100 mb-8">
-              Welcome to Anclote Pharmacy! Let's get you started.
+              Welcome to Anclote Pharmacy! Let&apos;s get you started.
             </p>
           </div>
         </div>
@@ -102,7 +102,7 @@ export default function NewPatientPage() {
                 <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <FileText className="w-8 h-8 text-primary-600" />
                 </div>
-                <h3 className="font-bold text-lg mb-2 text-gray-900">We'll Transfer</h3>
+                <h3 className="font-bold text-lg mb-2 text-gray-900">We&apos;ll Transfer</h3>
                 <p className="text-gray-600 text-sm">We handle prescription transfers from other pharmacies</p>
               </div>
 

@@ -71,7 +71,7 @@ export default function RefillPage() {
                 <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Phone className="w-8 h-8 text-primary-600" />
                 </div>
-                <h3 className="font-bold text-lg mb-2 text-gray-900">We'll Prepare It</h3>
+                <h3 className="font-bold text-lg mb-2 text-gray-900">We&apos;ll Prepare It</h3>
                 <p className="text-gray-600 text-sm">Our team will process your refill and call when ready</p>
               </div>
 

@@ -109,7 +109,7 @@ export default function MedicationTherapyManagementPage() {
               </div>
               <h3 className="text-2xl font-bold mb-4 text-gray-900">Action Plan Development</h3>
               <p className="text-gray-600 mb-4">
-                Together, we'll create a personalized medication action plan that includes:
+                Together, we&apos;ll create a personalized medication action plan that includes:
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start">

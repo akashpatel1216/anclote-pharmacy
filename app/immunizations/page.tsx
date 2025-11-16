@@ -230,7 +230,7 @@ export default function ImmunizationsPage() {
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">Photo ID or driver's license</span>
+                    <span className="text-gray-700">Photo ID or driver&apos;s license</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />

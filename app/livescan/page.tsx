@@ -256,7 +256,7 @@ export default function LiveScanPage() {
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-accent-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">Valid photo ID (driver's license, passport, or state ID)</span>
+                    <span className="text-gray-700">Valid photo ID (driver&apos;s license, passport, or state ID)</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-accent-600 mr-2 mt-0.5 flex-shrink-0" />

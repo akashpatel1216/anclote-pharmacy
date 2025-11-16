@@ -261,7 +261,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-gray-700 mb-4 italic">
-                "This pharmacy was recommended to us when we first moved to town, now we're the ones doing the recommending! Great personal service, friendly, fantastic prices and they call to let you know it's time to refill your normal monthly prescriptions. Love our hometown pharmacy and its staff!"
+                &quot;This pharmacy was recommended to us when we first moved to town, now we&apos;re the ones doing the recommending! Great personal service, friendly, fantastic prices and they call to let you know it&apos;s time to refill your normal monthly prescriptions. Love our hometown pharmacy and its staff!&quot;
               </p>
               <p className="font-bold text-primary-700">- Amy G.</p>
             </div>
@@ -277,7 +277,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-gray-700 mb-4 italic">
-                "Love, love, love the personal service! We have found our pharmacy home. The staff knows my name and always greets me with a smile."
+                &quot;Love, love, love the personal service! We have found our pharmacy home. The staff knows my name and always greets me with a smile.&quot;
               </p>
               <p className="font-bold text-primary-700">- Eve H.</p>
             </div>
@@ -293,7 +293,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-gray-700 mb-4 italic">
-                "Friendly and personable staff, really competitive prices and a lot faster than the big chain pharmacies. This is the place to go if you want that FAMILY TREATMENT!"
+                &quot;Friendly and personable staff, really competitive prices and a lot faster than the big chain pharmacies. This is the place to go if you want that FAMILY TREATMENT!&quot;
               </p>
               <p className="font-bold text-primary-700">- Sean O.</p>
             </div>
@@ -308,7 +308,7 @@ export default function Home() {
             Join Us in Your Health Journey
           </h2>
           <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-            Experience the difference with Anclote Pharmacy. Let's work together towards your health goals.
+            Experience the difference with Anclote Pharmacy. Let&apos;s work together towards your health goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/new-patient" className="bg-white text-primary-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-all shadow-lg">

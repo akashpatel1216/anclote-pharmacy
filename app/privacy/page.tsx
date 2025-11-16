@@ -14,7 +14,7 @@ export default function PrivacyPage() {
             <div className="card mb-8">
               <h2 className="text-2xl font-bold mb-4 text-gray-900">Introduction</h2>
               <p className="text-gray-600">
-                Anclote Pharmacy ("we," "our," or "us") is committed to protecting your privacy and handling your 
+                Anclote Pharmacy (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy and handling your 
                 personal information with care. This Privacy Policy explains how we collect, use, and safeguard your 
                 information when you visit our website or use our services.
               </p>

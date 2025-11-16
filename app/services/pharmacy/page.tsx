@@ -113,7 +113,7 @@ export default function PharmacyServicesPage() {
               <h2 className="text-2xl font-bold mb-4 text-gray-900">Competitive Pricing</h2>
               <p className="text-gray-600 mb-6">
                 We offer competitive prices on all medications and work with most insurance plans. 
-                We'll help you find the most cost-effective option for your prescriptions.
+                We&apos;ll help you find the most cost-effective option for your prescriptions.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start">
@@ -193,7 +193,7 @@ export default function PharmacyServicesPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Transfer Your Prescriptions?</h2>
           <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-            Switching to Anclote Pharmacy is easy. We'll handle all the details.
+            Switching to Anclote Pharmacy is easy. We&apos;ll handle all the details.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/refill" className="bg-white text-primary-700 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-all">

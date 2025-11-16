@@ -181,7 +181,7 @@ export default function MedicationAdherencePage() {
                   <CheckCircle className="w-8 h-8 text-primary-600" />
                 </div>
                 <h4 className="font-bold text-lg mb-2 text-gray-900">Peace of Mind</h4>
-                <p className="text-gray-600">Confidence that you're following your treatment plan</p>
+                <p className="text-gray-600">Confidence that you&apos;re following your treatment plan</p>
               </div>
             </div>
           </div>

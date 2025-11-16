@@ -25,7 +25,7 @@ export default function AboutPage() {
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Our Story</h2>
               <p className="text-lg text-gray-600 leading-relaxed">
                 Anclote Pharmacy opened its doors in 2012 with a simple mission: to provide personalized, 
-                compassionate pharmaceutical care to our community. Over the years, we've grown from a small 
+                compassionate pharmaceutical care to our community. Over the years, we&apos;ve grown from a small 
                 neighborhood pharmacy into a trusted healthcare partner for thousands of families.
               </p>
             </div>
@@ -44,8 +44,8 @@ export default function AboutPage() {
                 <Users className="w-12 h-12 text-primary-600 mb-4" />
                 <h3 className="text-xl font-bold mb-3 text-gray-900">Community Focused</h3>
                 <p className="text-gray-600">
-                  As an independent pharmacy, we're deeply rooted in our community. We're not just here 
-                  to fill prescriptions – we're here to be your trusted healthcare resource.
+                  As an independent pharmacy, we&apos;re deeply rooted in our community. We&apos;re not just here 
+                  to fill prescriptions – we&apos;re here to be your trusted healthcare resource.
                 </p>
               </div>
             </div>
@@ -231,7 +231,7 @@ export default function AboutPage() {
               <h3 className="text-2xl font-bold mb-4 text-gray-900">Experienced Healthcare Professionals</h3>
               <p className="text-gray-600 mb-6">
                 Our pharmacists and staff bring years of experience and a genuine passion for helping 
-                people. We're here not just to fill prescriptions, but to be your trusted healthcare advisors.
+                people. We&apos;re here not just to fill prescriptions, but to be your trusted healthcare advisors.
               </p>
               <ul className="text-left max-w-2xl mx-auto space-y-3">
                 <li className="flex items-start">

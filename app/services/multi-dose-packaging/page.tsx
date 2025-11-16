@@ -39,7 +39,7 @@ export default function MultiDosePackagingPage() {
             <h2 className="text-3xl font-bold mb-6 text-gray-900">What is Multi-Dose Packaging?</h2>
             <p className="text-lg text-gray-600">
               Our multi-dose packaging system organizes all your medications by date and time in 
-              easy-to-use, clearly labeled packets. No more sorting pills or worrying if you've 
+              easy-to-use, clearly labeled packets. No more sorting pills or worrying if you&apos;ve 
               taken your medications correctly.
             </p>
           </div>
@@ -117,7 +117,7 @@ export default function MultiDosePackagingPage() {
                 </div>
                 <h4 className="font-bold text-lg mb-2 text-gray-900">Transfer Prescriptions</h4>
                 <p className="text-gray-600 text-sm">
-                  We'll transfer your prescriptions from your current pharmacy
+                  We&apos;ll transfer your prescriptions from your current pharmacy
                 </p>
               </div>
               <div className="text-center">
@@ -144,7 +144,7 @@ export default function MultiDosePackagingPage() {
                 </div>
                 <h4 className="font-bold text-lg mb-2 text-gray-900">Monthly Delivery</h4>
                 <p className="text-gray-600 text-sm">
-                  Pick up your month's supply or have it delivered
+                  Pick up your month&apos;s supply or have it delivered
                 </p>
               </div>
             </div>

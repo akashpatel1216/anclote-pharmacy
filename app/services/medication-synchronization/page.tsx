@@ -22,7 +22,7 @@ export default function MedicationSynchronizationPage() {
           <div className="max-w-3xl mx-auto mb-16 text-center">
             <h2 className="text-3xl font-bold mb-6 text-gray-900">One Day. All Medications.</h2>
             <p className="text-lg text-gray-600">
-              Tired of multiple trips to the pharmacy each month? Medication synchronization, or "med sync," 
+              Tired of multiple trips to the pharmacy each month? Medication synchronization, or &quot;med sync,&quot; 
               aligns all your prescription refills to the same day, making it easier to manage your medications 
               and save time.
             </p>
@@ -128,7 +128,7 @@ export default function MedicationSynchronizationPage() {
                 </div>
                 <h4 className="font-bold text-lg mb-2 text-gray-900">Reminder Call</h4>
                 <p className="text-gray-600 text-sm">
-                  We'll call you before your pickup date to confirm your order
+                  We&apos;ll call you before your pickup date to confirm your order
                 </p>
               </div>
             </div>
@@ -206,14 +206,14 @@ export default function MedicationSynchronizationPage() {
               <div>
                 <h4 className="font-bold text-lg mb-2 text-gray-900">Can I change my pickup date?</h4>
                 <p className="text-gray-600">
-                  Yes, you can change your monthly pickup date at any time. Just let us know, and we'll 
+                  Yes, you can change your monthly pickup date at any time. Just let us know, and we&apos;ll 
                   adjust your schedule.
                 </p>
               </div>
               <div>
                 <h4 className="font-bold text-lg mb-2 text-gray-900">What if I need a prescription before my scheduled date?</h4>
                 <p className="text-gray-600">
-                  We can always fill prescriptions early if needed. Just give us a call and we'll have 
+                  We can always fill prescriptions early if needed. Just give us a call and we&apos;ll have 
                   it ready for you.
                 </p>
               </div>

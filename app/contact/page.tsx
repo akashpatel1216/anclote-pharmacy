@@ -33,7 +33,7 @@ export default function ContactPage() {
           <div className="max-w-4xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
             <p className="text-xl text-primary-100 mb-8">
-              We're here to help! Reach out to us with any questions or concerns.
+              We&apos;re here to help! Reach out to us with any questions or concerns.
             </p>
           </div>
         </div>
@@ -48,7 +48,7 @@ export default function ContactPage() {
               <div>
                 <h2 className="text-2xl font-bold mb-6 text-gray-900">Get in Touch</h2>
                 <p className="text-gray-600 mb-6">
-                  Visit us in person, give us a call, or send us a message. We're happy to assist you 
+                  Visit us in person, give us a call, or send us a message. We&apos;re happy to assist you 
                   with all your pharmacy and healthcare needs.
                 </p>
               </div>
