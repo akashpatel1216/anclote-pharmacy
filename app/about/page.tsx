@@ -159,7 +159,7 @@ export default function AboutPage() {
                   <div>
                     <h3 className="text-xl font-bold mb-2 text-gray-900">Comprehensive Services</h3>
                     <p className="text-gray-600">
-                      From prescription filling to immunizations to LiveScan fingerprinting, we're 
+                      From prescription filling to immunizations to LiveScan fingerprinting, we&apos;re 
                       your one-stop shop for health and wellness needs.
                     </p>
                   </div>

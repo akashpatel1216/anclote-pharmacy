@@ -136,7 +136,7 @@ export default function MedicationSynchronizationPage() {
 
           {/* Features */}
           <div className="max-w-4xl mx-auto mb-16">
-            <h3 className="text-3xl font-bold mb-8 text-center text-gray-900">What's Included</h3>
+            <h3 className="text-3xl font-bold mb-8 text-center text-gray-900">What&apos;s Included</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="card">
                 <h4 className="font-bold text-xl mb-4 text-primary-700">Pharmacy Services</h4>
