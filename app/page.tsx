@@ -297,6 +297,38 @@ export default function Home() {
               </p>
               <p className="font-bold text-primary-700">- Sean O.</p>
             </div>
+
+            <div className="card">
+              <div className="flex items-center mb-4">
+                <div className="flex text-yellow-400">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                    </svg>
+                  ))}
+                </div>
+              </div>
+              <p className="text-gray-700 mb-4 italic">
+                &quot;Great service. I got my fingerprints for a job application. Mr. Chetan Shah was very professional and provided a quick service, and provided me with information on the services at his pharmacy. I recommend this place.&quot;
+              </p>
+              <p className="font-bold text-primary-700">- Samantha Delint</p>
+            </div>
+
+            <div className="card">
+              <div className="flex items-center mb-4">
+                <div className="flex text-yellow-400">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                    </svg>
+                  ))}
+                </div>
+              </div>
+              <p className="text-gray-700 mb-4 italic">
+                &quot;The owner is very compassionate, and caring. He took the time to help us find the best fit options for our son and gave us great advice and recommendations. We even were able to sample some things! He treated us like we matter, and not like we&apos;re just a number. This pharmacy had everything we were looking for and we walked out extremely satisfied and happy! The kids even got some cute socks, they have a gift area too which is cute and has a variety of affordable items! Thanks again for the amazing service!&quot;
+              </p>
+              <p className="font-bold text-primary-700">- Derek Arnold</p>
+            </div>
           </div>
         </div>
       </section>
