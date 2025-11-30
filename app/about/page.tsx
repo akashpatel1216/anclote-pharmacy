@@ -5,12 +5,27 @@ import { Heart, Users, Award, Target, CheckCircle, TrendingUp } from 'lucide-rea
 export default function AboutPage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-600 to-primary-800 text-white py-20">
-        <div className="container mx-auto px-4">
+      {/* Hero Section with Background */}
+      <section className="relative bg-gradient-to-br from-primary-600 to-primary-800 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/hero/pharmacy-team.jpg"
+            alt="Anclote Pharmacy team"
+            fill
+            className="object-cover opacity-15"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-600/95 to-primary-800/95"></div>
+        </div>
+        <div className="absolute top-20 right-10 w-64 h-64 bg-primary-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+        <div className="absolute bottom-20 left-10 w-64 h-64 bg-accent-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">About Anclote Pharmacy</h1>
-            <p className="text-xl text-primary-100 mb-8">
+            <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold mb-6 border border-white/30">
+              🏪 Our Story
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">About Anclote Pharmacy</h1>
+            <p className="text-xl text-primary-50 mb-8 drop-shadow-md">
               Building relationships through quality care since 2012
             </p>
           </div>
@@ -50,15 +65,24 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Pharmacy Interior Image */}
-            <div className="mb-16">
-              <Image
-                src="/images/pharmacy/pharmacy-customer.jpg"
-                alt="Friendly customer service and welcoming pharmacy environment"
-                width={1200}
-                height={600}
-                className="rounded-xl shadow-xl w-full h-auto"
-              />
+            {/* Pharmacy Interior Image with Enhanced Design */}
+            <div className="mb-16 relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary-600 to-accent-600 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/images/pharmacy/pharmacy-customer.jpg"
+                  alt="Friendly customer service and welcoming pharmacy environment"
+                  width={1200}
+                  height={600}
+                  className="w-full h-auto group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary-900/80 to-transparent flex items-end">
+                  <div className="p-8">
+                    <h3 className="text-white text-3xl font-bold mb-2">Welcome to Our Pharmacy</h3>
+                    <p className="text-white/90 text-lg">Where every patient is treated like family</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

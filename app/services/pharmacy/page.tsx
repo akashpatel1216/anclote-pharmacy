@@ -5,41 +5,71 @@ import { Pill, Clock, DollarSign, Heart, CheckCircle, Phone } from 'lucide-react
 export default function PharmacyServicesPage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-600 to-primary-800 text-white py-20">
-        <div className="container mx-auto px-4">
+      {/* Hero Section with Background */}
+      <section className="relative bg-gradient-to-br from-primary-600 to-primary-800 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/hero/pharmacy-bottles.jpg"
+            alt="Pharmacy medication bottles"
+            fill
+            className="object-cover opacity-15"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-600/95 to-primary-800/95"></div>
+        </div>
+        <div className="absolute top-20 right-10 w-64 h-64 bg-primary-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+        <div className="absolute bottom-20 left-10 w-64 h-64 bg-accent-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Pharmacy Services</h1>
-            <p className="text-xl text-primary-100 mb-8">
+            <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold mb-6 border border-white/30">
+              💊 Professional Care
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">Pharmacy Services</h1>
+            <p className="text-xl text-primary-50 mb-8 drop-shadow-md">
               Professional medication management and pharmaceutical care tailored to your needs
             </p>
-            <Link href="/refill" className="inline-block bg-white text-primary-700 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-all">
-              Refill Prescription
+            <Link href="/refill" className="inline-block bg-white text-primary-700 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 hover:scale-105 transition-all shadow-xl">
+              Refill Prescription →
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Medication Image Section */}
-      <section className="py-12 bg-gray-50">
+      {/* Medication Image Section with Enhanced Design */}
+      <section className="py-16 bg-gray-50 relative">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
-              <Image
-                src="/images/medications/pills-capsules.jpg"
-                alt="Professional medication management with various pills and capsules"
-                fill
-                className="object-cover"
-              />
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary-500 to-accent-500 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+              <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/images/medications/pills-capsules.jpg"
+                  alt="Professional medication management with various pills and capsules"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              </div>
             </div>
-            <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
-              <Image
-                src="/images/medications/white-pills-grid.jpg"
-                alt="Organized medication management system"
-                fill
-                className="object-cover"
-              />
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-accent-500 to-primary-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+              <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/images/medications/white-pills-grid.jpg"
+                  alt="Organized medication management system"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              </div>
             </div>
+          </div>
+          <div className="text-center mt-12 max-w-3xl mx-auto">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Quality Medications You Can Trust</h3>
+            <p className="text-gray-600">
+              We source all our medications from licensed distributors and follow strict quality control protocols 
+              to ensure you receive safe, effective treatments every time.
+            </p>
           </div>
         </div>
       </section>

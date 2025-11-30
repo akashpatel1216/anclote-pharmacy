@@ -1,18 +1,31 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Fingerprint, Clock, Shield, CheckCircle, DollarSign, Phone, FileText } from 'lucide-react'
 
 export default function LiveScanPage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-accent-500 to-accent-700 text-white py-20">
-        <div className="container mx-auto px-4">
+      {/* Hero Section with Background */}
+      <section className="relative bg-gradient-to-br from-accent-500 to-accent-700 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/hero/livescan-hero.jpg"
+            alt="LiveScan fingerprinting services"
+            fill
+            className="object-cover opacity-15"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-accent-500/95 to-accent-700/95"></div>
+        </div>
+        <div className="absolute top-20 right-10 w-64 h-64 bg-accent-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+        <div className="absolute bottom-20 left-10 w-64 h-64 bg-primary-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
-            <div className="inline-block bg-white text-accent-600 px-4 py-2 rounded-full text-sm font-bold mb-4">
-              NOW AVAILABLE
+            <div className="inline-block bg-white text-accent-600 px-4 py-2 rounded-full text-sm font-bold mb-6 border-2 border-white/30">
+              ✋ NOW AVAILABLE
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">LiveScan Fingerprinting Services</h1>
-            <p className="text-xl text-accent-100 mb-8">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">LiveScan Fingerprinting Services</h1>
+            <p className="text-xl text-accent-50 mb-8 drop-shadow-md">
               Fast, secure, and convenient fingerprinting for background checks, licensing, and employment
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -20,11 +33,11 @@ export default function LiveScanPage() {
                 href="https://www.suncoastlivescan.net/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-block bg-white text-accent-700 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-all shadow-lg text-center"
+                className="inline-block bg-white text-accent-700 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 hover:scale-105 transition-all shadow-xl text-center"
               >
                 Schedule Online →
               </a>
-              <a href="tel:727-944-5800" className="inline-block bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-accent-700 transition-all text-center">
+              <a href="tel:727-944-5800" className="inline-block bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-accent-700 hover:scale-105 transition-all backdrop-blur-sm text-center">
                 Call: (727) 944-5800
               </a>
             </div>

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react'
 
 export default function ContactPage() {
@@ -27,12 +28,27 @@ export default function ContactPage() {
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-600 to-primary-800 text-white py-20">
-        <div className="container mx-auto px-4">
+      {/* Hero Section with Background */}
+      <section className="relative bg-gradient-to-br from-primary-600 to-primary-800 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/hero/contact-hero.jpg"
+            alt="Contact Anclote Pharmacy"
+            fill
+            className="object-cover opacity-15"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-600/95 to-primary-800/95"></div>
+        </div>
+        <div className="absolute top-20 right-10 w-64 h-64 bg-primary-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+        <div className="absolute bottom-20 left-10 w-64 h-64 bg-accent-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
-            <p className="text-xl text-primary-100 mb-8">
+            <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold mb-6 border border-white/30">
+              📞 Get In Touch
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">Contact Us</h1>
+            <p className="text-xl text-primary-50 mb-8 drop-shadow-md">
               We&apos;re here to help! Reach out to us with any questions or concerns.
             </p>
           </div>

@@ -5,32 +5,58 @@ import { Shield, Syringe, Users, Clock, CheckCircle, Phone, Calendar } from 'luc
 export default function ImmunizationsPage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-600 to-primary-800 text-white py-20">
-        <div className="container mx-auto px-4">
+      {/* Hero Section with Background */}
+      <section className="relative bg-gradient-to-br from-primary-600 to-primary-800 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/hero/vaccination-hero.jpg"
+            alt="Vaccination services background"
+            fill
+            className="object-cover opacity-15"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-600/95 to-primary-800/95"></div>
+        </div>
+        <div className="absolute top-20 right-10 w-64 h-64 bg-primary-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+        <div className="absolute bottom-20 left-10 w-64 h-64 bg-accent-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Immunization Services</h1>
-            <p className="text-xl text-primary-100 mb-8">
+            <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold mb-6 border border-white/30">
+              💉 Stay Protected
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">Immunization Services</h1>
+            <p className="text-xl text-primary-50 mb-8 drop-shadow-md">
               Convenient vaccination services to keep you and your family protected and healthy
             </p>
-            <Link href="/contact" className="inline-block bg-white text-primary-700 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-all">
-              Schedule Vaccination
+            <Link href="/contact" className="inline-block bg-white text-primary-700 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 hover:scale-105 transition-all shadow-xl">
+              Schedule Vaccination →
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Immunization Image */}
-      <section className="py-12 bg-gray-50">
+      {/* Immunization Image with Enhanced Design */}
+      <section className="py-16 bg-gray-50 relative">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <Image
-              src="/images/services/syringe-medical.jpg"
-              alt="Professional immunization services with medical equipment"
-              width={1200}
-              height={600}
-              className="rounded-xl shadow-lg w-full h-auto"
-            />
+          <div className="max-w-5xl mx-auto">
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary-600 to-accent-600 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/images/services/syringe-medical.jpg"
+                  alt="Professional immunization services with medical equipment"
+                  width={1200}
+                  height={600}
+                  className="w-full h-auto group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                  <div className="p-8">
+                    <h3 className="text-white text-2xl font-bold mb-2">Professional Immunization Services</h3>
+                    <p className="text-white/90">Administered by certified pharmacists in a safe, comfortable environment</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

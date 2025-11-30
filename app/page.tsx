@@ -5,23 +5,42 @@ import { Pill, Users, Heart, Clock, Award, Shield, Phone, CheckCircle } from 'lu
 export default function Home() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-600 to-primary-800 text-white">
-        <div className="absolute inset-0 bg-black opacity-10"></div>
+      {/* Hero Section with Background Image */}
+      <section className="relative bg-gradient-to-br from-primary-600 to-primary-800 text-white overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/hero/pharmacy-hero.jpg"
+            alt="Anclote Pharmacy Interior"
+            fill
+            className="object-cover opacity-20"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-600/90 to-primary-800/90"></div>
+        </div>
+        
+        {/* Floating Decorative Elements */}
+        <div className="absolute top-20 right-10 w-72 h-72 bg-primary-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+        <div className="absolute top-40 left-10 w-72 h-72 bg-accent-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+        <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-primary-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+        
         <div className="container mx-auto px-4 py-24 md:py-32 relative z-10">
           <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold mb-6 border border-white/30">
+              ⭐ Serving Tarpon Springs Since 2012
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight drop-shadow-lg">
               Your Trusted Community Pharmacy
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-primary-100">
+            <p className="text-xl md:text-2xl mb-8 text-primary-50 drop-shadow-md">
               Providing personalized healthcare services for our community since 2012. 
               Your health is our priority.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/refill" className="inline-block bg-white text-primary-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-all shadow-lg text-center">
-                Refill Prescription
+              <Link href="/refill" className="inline-block bg-white text-primary-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 hover:scale-105 transition-all shadow-xl text-center">
+                Refill Prescription →
               </Link>
-              <Link href="/contact" className="inline-block bg-transparent border-2 border-white text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-primary-700 transition-all text-center">
+              <Link href="/contact" className="inline-block bg-transparent border-2 border-white text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-primary-700 hover:scale-105 transition-all backdrop-blur-sm text-center">
                 Contact Us
               </Link>
             </div>
@@ -96,72 +115,121 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Health Image Section */}
-      <section className="py-12 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <Image
-              src="/images/medications/health-pills.jpg"
-              alt="Health spelled with pills representing our commitment to your well-being"
-              width={1200}
-              height={400}
-              className="rounded-xl shadow-lg w-full h-auto"
-              priority
-            />
+      {/* Health Image Section with Unique Design */}
+      <section className="py-16 bg-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary-100 rounded-full -translate-y-1/2 translate-x-1/2 opacity-50"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary-600 to-accent-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+              <div className="relative">
+                <Image
+                  src="/images/medications/health-pills.jpg"
+                  alt="Health spelled with pills representing our commitment to your well-being"
+                  width={1200}
+                  height={800}
+                  className="rounded-2xl shadow-2xl w-full h-auto"
+                />
+              </div>
+            </div>
+            <div className="space-y-6">
+              <div className="inline-block bg-primary-100 px-4 py-2 rounded-full text-primary-700 font-bold text-sm">
+                💊 Quality Medications
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+                Your Health, Our Priority
+              </h2>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                We provide a comprehensive range of prescription and over-the-counter medications, 
+                all sourced from trusted suppliers to ensure the highest quality for our patients.
+              </p>
+              <div className="grid grid-cols-2 gap-4 pt-4">
+                <div className="bg-primary-50 p-4 rounded-xl">
+                  <div className="text-3xl font-bold text-primary-700 mb-1">100%</div>
+                  <div className="text-sm text-gray-600">Quality Assured</div>
+                </div>
+                <div className="bg-accent-50 p-4 rounded-xl">
+                  <div className="text-3xl font-bold text-accent-700 mb-1">Fast</div>
+                  <div className="text-sm text-gray-600">Prescription Filling</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Core Services */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
+      {/* Core Services with Enhanced Design */}
+      <section className="py-20 bg-gray-50 relative overflow-hidden">
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent-200 rounded-full -translate-y-1/2 -translate-x-1/2 opacity-30"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
+            <div className="inline-block bg-primary-100 px-4 py-2 rounded-full text-primary-700 font-bold text-sm mb-4">
+              🏥 Our Services
+            </div>
             <h2 className="section-title">Core Healthcare Services</h2>
             <p className="section-subtitle">
               Comprehensive pharmaceutical care and health services under one roof
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Link href="/services/pharmacy" className="card group cursor-pointer">
-              <div className="bg-gradient-to-br from-primary-500 to-primary-700 w-16 h-16 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <Pill className="w-8 h-8 text-white" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Link href="/services/pharmacy" className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity"></div>
+              <div className="card relative overflow-hidden group-hover:scale-105 group-hover:-translate-y-2 transition-all duration-300">
+                <div className="absolute top-0 right-0 text-9xl font-bold text-primary-50 -mt-4 -mr-4">01</div>
+                <div className="relative">
+                  <div className="bg-gradient-to-br from-primary-500 to-primary-700 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all shadow-lg">
+                    <Pill className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Medication</h3>
+                  <p className="text-gray-600 mb-4">
+                    Professional medication management, prescription filling, and pharmaceutical consultation services.
+                  </p>
+                  <div className="flex items-center text-primary-600 font-semibold group-hover:gap-2 transition-all">
+                    <span>Learn more</span>
+                    <span className="transform group-hover:translate-x-1 transition-transform">→</span>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-center justify-between mb-2">
-                <h3 className="text-2xl font-bold text-gray-900">Medication</h3>
-                <span className="text-4xl font-bold text-primary-200">01</span>
-              </div>
-              <p className="text-gray-600 mb-4">
-                Professional medication management, prescription filling, and pharmaceutical consultation services.
-              </p>
-              <span className="text-primary-600 font-semibold group-hover:underline">Learn more →</span>
             </Link>
 
-            <Link href="/services/medication-therapy-management" className="card group cursor-pointer">
-              <div className="bg-gradient-to-br from-primary-500 to-primary-700 w-16 h-16 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <Users className="w-8 h-8 text-white" />
+            <Link href="/services/medication-therapy-management" className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-accent-500 to-accent-700 rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity"></div>
+              <div className="card relative overflow-hidden group-hover:scale-105 group-hover:-translate-y-2 transition-all duration-300">
+                <div className="absolute top-0 right-0 text-9xl font-bold text-accent-50 -mt-4 -mr-4">02</div>
+                <div className="relative">
+                  <div className="bg-gradient-to-br from-accent-500 to-accent-700 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all shadow-lg">
+                    <Users className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Consultation</h3>
+                  <p className="text-gray-600 mb-4">
+                    Personalized health consultations and medication therapy management for optimal outcomes.
+                  </p>
+                  <div className="flex items-center text-accent-600 font-semibold group-hover:gap-2 transition-all">
+                    <span>Learn more</span>
+                    <span className="transform group-hover:translate-x-1 transition-transform">→</span>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-center justify-between mb-2">
-                <h3 className="text-2xl font-bold text-gray-900">Consultation</h3>
-                <span className="text-4xl font-bold text-primary-200">02</span>
-              </div>
-              <p className="text-gray-600 mb-4">
-                Personalized health consultations and medication therapy management for optimal outcomes.
-              </p>
-              <span className="text-primary-600 font-semibold group-hover:underline">Learn more →</span>
             </Link>
 
-            <Link href="/immunizations" className="card group cursor-pointer">
-              <div className="bg-gradient-to-br from-primary-500 to-primary-700 w-16 h-16 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <Shield className="w-8 h-8 text-white" />
+            <Link href="/immunizations" className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-600 to-accent-600 rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity"></div>
+              <div className="card relative overflow-hidden group-hover:scale-105 group-hover:-translate-y-2 transition-all duration-300">
+                <div className="absolute top-0 right-0 text-9xl font-bold text-primary-50 -mt-4 -mr-4">03</div>
+                <div className="relative">
+                  <div className="bg-gradient-to-br from-primary-600 to-accent-600 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all shadow-lg">
+                    <Shield className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Immunizations</h3>
+                  <p className="text-gray-600 mb-4">
+                    Convenient immunization services to keep you and your family protected and healthy.
+                  </p>
+                  <div className="flex items-center text-primary-600 font-semibold group-hover:gap-2 transition-all">
+                    <span>Learn more</span>
+                    <span className="transform group-hover:translate-x-1 transition-transform">→</span>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-center justify-between mb-2">
-                <h3 className="text-2xl font-bold text-gray-900">Immunizations</h3>
-                <span className="text-4xl font-bold text-primary-200">03</span>
-              </div>
-              <p className="text-gray-600 mb-4">
-                Convenient immunization services to keep you and your family protected and healthy.
-              </p>
-              <span className="text-primary-600 font-semibold group-hover:underline">Learn more →</span>
             </Link>
           </div>
         </div>
@@ -195,46 +263,65 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Pharmacy Experience Section */}
-      <section className="py-20 bg-white">
+      {/* Pharmacy Experience Section with Enhanced Design */}
+      <section className="py-20 bg-gradient-to-b from-white to-gray-50 relative">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
-            <div>
-              <Image
-                src="/images/pharmacy/pharmacy-customer.jpg"
-                alt="Friendly customer service at Anclote Pharmacy"
-                width={800}
-                height={600}
-                className="rounded-xl shadow-xl w-full h-auto"
-              />
-            </div>
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Experience Personalized Care</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            <div className="order-2 md:order-1">
+              <div className="inline-block bg-accent-100 px-4 py-2 rounded-full text-accent-700 font-bold text-sm mb-6">
+                🏪 Visit Our Pharmacy
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+                Experience Personalized Care
+              </h2>
               <p className="text-lg text-gray-600 mb-6">
                 Step into our welcoming pharmacy where friendly faces and expert care await. Our team 
                 takes the time to understand your needs and provide personalized service.
               </p>
-              <ul className="space-y-3 mb-6">
-                <li className="flex items-start">
-                  <CheckCircle className="w-6 h-6 text-primary-600 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Friendly, knowledgeable staff</span>
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-start bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <div className="bg-primary-100 p-2 rounded-lg mr-3">
+                    <CheckCircle className="w-5 h-5 text-primary-600" />
+                  </div>
+                  <div>
+                    <div className="font-bold text-gray-900">Friendly, knowledgeable staff</div>
+                    <div className="text-sm text-gray-600">We know your name and remember your preferences</div>
+                  </div>
                 </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-6 h-6 text-primary-600 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Personalized medication consultations</span>
+                <li className="flex items-start bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <div className="bg-primary-100 p-2 rounded-lg mr-3">
+                    <CheckCircle className="w-5 h-5 text-primary-600" />
+                  </div>
+                  <div>
+                    <div className="font-bold text-gray-900">Personalized medication consultations</div>
+                    <div className="text-sm text-gray-600">One-on-one time with our pharmacists</div>
+                  </div>
                 </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-6 h-6 text-primary-600 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Well-stocked pharmacy with quality products</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-6 h-6 text-primary-600 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Comfortable, accessible environment</span>
+                <li className="flex items-start bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <div className="bg-primary-100 p-2 rounded-lg mr-3">
+                    <CheckCircle className="w-5 h-5 text-primary-600" />
+                  </div>
+                  <div>
+                    <div className="font-bold text-gray-900">Well-stocked pharmacy</div>
+                    <div className="text-sm text-gray-600">Quality products and comprehensive inventory</div>
+                  </div>
                 </li>
               </ul>
-              <Link href="/contact" className="btn-primary inline-block">
-                Visit Us Today
+              <Link href="/contact" className="btn-primary inline-block hover:scale-105 transition-transform">
+                Visit Us Today →
               </Link>
+            </div>
+            <div className="order-1 md:order-2 relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-accent-500 to-primary-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+              <div className="relative">
+                <Image
+                  src="/images/pharmacy/pharmacy-customer.jpg"
+                  alt="Friendly customer service at Anclote Pharmacy"
+                  width={800}
+                  height={600}
+                  className="rounded-2xl shadow-2xl w-full h-auto"
+                />
+              </div>
             </div>
           </div>
         </div>
