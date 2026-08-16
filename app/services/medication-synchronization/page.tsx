@@ -1,252 +1,155 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Calendar, CheckCircle, Clock, Smile, TrendingUp, Package } from 'lucide-react'
+import { Calendar, CheckCircle, Clock, Package, TrendingUp } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Medication Synchronization | Anclote Pharmacy Tarpon Springs',
+  description:
+    'Align all your prescription refills to one monthly pickup date. Fewer trips, no missed doses. Tarpon Springs. Call 727-944-5800.',
+}
+
+const faqs = [
+  {
+    question: 'Is there a cost for medication synchronization?',
+    answer: 'No. Medication synchronization is a free service.',
+  },
+  {
+    question: 'Can I change my pickup date?',
+    answer: 'Yes. Let us know and we will adjust your monthly schedule.',
+  },
+  {
+    question: 'Will this work with my insurance?',
+    answer: 'Yes. We process your insurance the same way we do standard refills.',
+  },
+  {
+    question: "What if I'm prescribed a new medication mid-cycle?",
+    answer: "Call us and we'll add it to your sync schedule at your next pickup.",
+  },
+  {
+    question: 'Can I still get an early refill if I travel?',
+    answer: "Yes. Let us know your dates and we'll adjust your pickup ahead of time.",
+  },
+]
 
 export default function MedicationSynchronizationPage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-600 to-primary-800 text-white py-20">
+      <section className="page-hero">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Medication Synchronization</h1>
-            <p className="text-xl text-primary-100 mb-8">
-              Pick up all your medications on one convenient day each month
+            <div className="page-eyebrow">
+              One pickup date for Tarpon Springs refills
+            </div>
+            <h1 className="page-heading">
+              Medication Synchronization in Tarpon Springs
+            </h1>
+            <p className="page-intro">
+              Align all your prescription refills to one monthly pickup date and make medication
+              management easier at home.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Main Content */}
-      <section className="py-20">
+      <section className="content-section">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto mb-16 text-center">
-            <h2 className="text-3xl font-bold mb-6 text-gray-900">One Day. All Medications.</h2>
-            <p className="text-lg text-gray-600">
-              Tired of multiple trips to the pharmacy each month? Medication synchronization, or &quot;med sync,&quot; 
-              aligns all your prescription refills to the same day, making it easier to manage your medications 
-              and save time.
-            </p>
-          </div>
-
-          {/* Benefits Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <div className="card text-center hover:shadow-xl transition-shadow">
-              <div className="bg-primary-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Calendar className="w-10 h-10 text-primary-600" />
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Fewer Pharmacy Trips</h3>
-              <p className="text-gray-600">
-                Pick up all prescriptions at once instead of making multiple trips throughout the month
+          <div className="mx-auto max-w-5xl">
+            <div className="tint-panel">
+              <h2 className="mb-6 text-3xl font-semibold text-slate-950">How Medication Synchronization Works</h2>
+              <p className="text-lg leading-relaxed text-slate-700">
+                We align all your maintenance prescriptions to the same pickup day each month so
+                you make fewer trips, miss fewer doses, and always know what is ready. It works
+                especially well when combined with{' '}
+                <Link href="/services/medication-adherence" className="font-semibold text-primary-700">
+                  medication adherence support
+                </Link>{' '}
+                or{' '}
+                <Link href="/services/multi-dose-packaging" className="font-semibold text-primary-700">
+                  multi-dose packaging
+                </Link>
+                .
               </p>
             </div>
 
-            <div className="card text-center hover:shadow-xl transition-shadow">
-              <div className="bg-primary-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="w-10 h-10 text-primary-600" />
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Better Adherence</h3>
-              <p className="text-gray-600">
-                Never run out of medications because you forgot to refill one prescription
-              </p>
-            </div>
-
-            <div className="card text-center hover:shadow-xl transition-shadow">
-              <div className="bg-primary-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-10 h-10 text-primary-600" />
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Time-Saving</h3>
-              <p className="text-gray-600">
-                Spend less time managing prescriptions and more time doing what you love
-              </p>
-            </div>
-
-            <div className="card text-center hover:shadow-xl transition-shadow">
-              <div className="bg-primary-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Smile className="w-10 h-10 text-primary-600" />
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Less Stress</h3>
-              <p className="text-gray-600">
-                No more keeping track of multiple refill dates and schedules
-              </p>
-            </div>
-
-            <div className="card text-center hover:shadow-xl transition-shadow">
-              <div className="bg-primary-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-10 h-10 text-primary-600" />
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Improved Health</h3>
-              <p className="text-gray-600">
-                Consistent medication use leads to better health outcomes
-              </p>
-            </div>
-
-            <div className="card text-center hover:shadow-xl transition-shadow">
-              <div className="bg-primary-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Package className="w-10 h-10 text-primary-600" />
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Personalized Service</h3>
-              <p className="text-gray-600">
-                Your pharmacist reviews your medications each month
-              </p>
-            </div>
-          </div>
-
-          {/* How It Works */}
-          <div className="bg-primary-50 rounded-2xl p-8 md:p-12 mb-16">
-            <h3 className="text-3xl font-bold mb-8 text-center text-gray-900">How Med Sync Works</h3>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="bg-primary-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                  1
-                </div>
-                <h4 className="font-bold text-lg mb-2 text-gray-900">Enroll</h4>
-                <p className="text-gray-600 text-sm">
-                  Talk to your pharmacist about enrolling in medication synchronization
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="bg-primary-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                  2
-                </div>
-                <h4 className="font-bold text-lg mb-2 text-gray-900">Choose Your Date</h4>
-                <p className="text-gray-600 text-sm">
-                  Select the most convenient day of the month for your pickups
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="bg-primary-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                  3
-                </div>
-                <h4 className="font-bold text-lg mb-2 text-gray-900">We Sync</h4>
-                <p className="text-gray-600 text-sm">
-                  We align all your prescriptions to your chosen refill date
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="bg-primary-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                  4
-                </div>
-                <h4 className="font-bold text-lg mb-2 text-gray-900">Reminder Call</h4>
-                <p className="text-gray-600 text-sm">
-                  We&apos;ll call you before your pickup date to confirm your order
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Features */}
-          <div className="max-w-4xl mx-auto mb-16">
-            <h3 className="text-3xl font-bold mb-8 text-center text-gray-900">What&apos;s Included</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
               <div className="card">
-                <h4 className="font-bold text-xl mb-4 text-primary-700">Pharmacy Services</h4>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">Automatic prescription refills</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">Monthly reminder calls</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">Prescription synchronization</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">Pharmacist medication review</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">Insurance verification</span>
-                  </li>
-                </ul>
+                <div className="feature-icon">
+                  <Calendar className="h-8 w-8 text-primary-600" />
+                </div>
+                <h2 className="compact-title">Benefits of One Pickup Date</h2>
+                <p className="body-copy">
+                  Fewer pharmacy trips, fewer missed refills, and a monthly rhythm that is easier to
+                  manage for patients and caregivers.
+                </p>
               </div>
-
               <div className="card">
-                <h4 className="font-bold text-xl mb-4 text-primary-700">Your Benefits</h4>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">One convenient pickup day</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">No appointment necessary</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">Free service (no extra cost)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">Flexibility to change pickup date</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">Delivery options available</span>
-                  </li>
-                </ul>
+                <div className="feature-icon">
+                  <TrendingUp className="h-8 w-8 text-primary-600" />
+                </div>
+                <h2 className="compact-title">Monthly Pharmacist Review</h2>
+                <p className="body-copy">
+                  Each month we review what is due, check for refill authorizations, and make sure
+                  everything is lined up before your pickup day.
+                </p>
+              </div>
+              <div className="card">
+                <div className="feature-icon">
+                  <Package className="h-8 w-8 text-primary-600" />
+                </div>
+                <h2 className="compact-title">Flexible Support</h2>
+                <p className="body-copy">
+                  We can adapt when medications change, travel comes up, or you need packaging
+                  support added later.
+                </p>
               </div>
             </div>
-          </div>
 
-          {/* FAQ */}
-          <div className="bg-gray-50 rounded-2xl p-8 md:p-12">
-            <h3 className="text-3xl font-bold mb-8 text-center text-gray-900">Frequently Asked Questions</h3>
-            <div className="space-y-6 max-w-3xl mx-auto">
-              <div>
-                <h4 className="font-bold text-lg mb-2 text-gray-900">Is there a cost for med sync?</h4>
-                <p className="text-gray-600">
-                  No! Medication synchronization is a free service we offer to help our patients better 
-                  manage their medications.
-                </p>
-              </div>
-              <div>
-                <h4 className="font-bold text-lg mb-2 text-gray-900">Can I change my pickup date?</h4>
-                <p className="text-gray-600">
-                  Yes, you can change your monthly pickup date at any time. Just let us know, and we&apos;ll 
-                  adjust your schedule.
-                </p>
-              </div>
-              <div>
-                <h4 className="font-bold text-lg mb-2 text-gray-900">What if I need a prescription before my scheduled date?</h4>
-                <p className="text-gray-600">
-                  We can always fill prescriptions early if needed. Just give us a call and we&apos;ll have 
-                  it ready for you.
-                </p>
-              </div>
-              <div>
-                <h4 className="font-bold text-lg mb-2 text-gray-900">Will this work with my insurance?</h4>
-                <p className="text-gray-600">
-                  Yes, medication synchronization works with all insurance plans. We handle all the 
-                  insurance billing as usual.
-                </p>
+            <div className="mt-12 rounded-[32px] bg-white p-8 shadow-sm ring-1 ring-gray-100 md:p-12">
+              <h2 className="mb-6 text-3xl font-semibold text-slate-950">How to Enroll</h2>
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-4">
+                {[
+                  'Call 727-944-5800 and tell us you would like to sync your medications.',
+                  'We review your current prescriptions and choose a monthly pickup date that works for you.',
+                  'We coordinate with your doctors on any refills that need authorization.',
+                  'You pick everything up on the same day each month, and we call you a few days before.',
+                ].map((step, index) => (
+                  <div key={step} className="rounded-2xl bg-primary-50 p-6">
+                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-600 text-xl font-semibold text-white">
+                      {index + 1}
+                    </div>
+                    <p className="body-copy">{step}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 bg-primary-700 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Start Medication Synchronization Today</h2>
-          <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-            Simplify your life with one convenient pickup day each month
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="bg-white text-primary-700 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-all">
-              Enroll Now
-            </Link>
-            <a href="tel:(727) 944-5800" className="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-primary-700 transition-all">
-              Call to Learn More
-            </a>
+      <section className="muted-band">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="section-title text-center">Frequently Asked Questions</h2>
+            <div className="space-y-6">
+              {faqs.map((faq) => (
+                <div key={faq.question} className="card">
+                  <h3 className="mb-2 text-xl font-semibold text-slate-950">{faq.question}</h3>
+                  <p className="body-copy">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-10 text-center">
+              <a
+                href="tel:727-944-5800"
+                className="btn-primary gap-2"
+              >
+                <Clock className="mr-2 h-5 w-5" />
+                Call to Enroll
+              </a>
+            </div>
           </div>
         </div>
       </section>
     </>
   )
 }
-
