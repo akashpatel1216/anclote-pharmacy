@@ -1,237 +1,177 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
-import Image from 'next/image'
-import { Accessibility, Heart, ShoppingBag, Headphones, CheckCircle, Phone } from 'lucide-react'
+import { Accessibility, Heart, Phone, Shield, ShoppingBag } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Durable Medical Equipment in Tarpon Springs | Anclote Pharmacy',
+  description:
+    'Wheelchairs, walkers, CPAP supplies and diabetic supplies in Tarpon Springs. Insurance billing and fitting help. Call 727-944-5800.',
+}
+
+const faqs = [
+  {
+    question: 'Do you bill Medicare for medical equipment?',
+    answer:
+      "Yes. We bill Medicare and most commercial insurance directly. Call 727-944-5800 with your plan details and we'll confirm coverage before you order.",
+  },
+  {
+    question: 'Can I rent equipment instead of buying?',
+    answer: 'Yes. Wheelchairs, walkers, and other mobility equipment are available to rent short term.',
+  },
+  {
+    question: 'Do I need a prescription for medical equipment?',
+    answer: "Some items require one for insurance coverage and others do not. Call and we'll tell you which applies.",
+  },
+  {
+    question: "What if the item I need isn't in stock?",
+    answer: "We order it and call you when it arrives, usually within two business days.",
+  },
+  {
+    question: 'Can you help me fit the equipment?',
+    answer: "Yes. Bring the patient in and we'll size and adjust it in-store.",
+  },
+]
 
 export default function DurableMedicalEquipmentPage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-600 to-primary-800 text-white py-20">
+      <section className="page-hero">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Durable Medical Equipment</h1>
-            <p className="text-xl text-primary-100 mb-8">
-              Quality medical equipment and supplies to support your health and independence at home
+            <div className="page-eyebrow">
+              Medical equipment and supplies in Tarpon Springs
+            </div>
+            <h1 className="page-heading">
+              Durable Medical Equipment in Tarpon Springs
+            </h1>
+            <p className="page-intro">
+              Local help with mobility equipment, CPAP supplies, diabetic supplies, and everyday
+              home-safety items.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Equipment Image */}
-      <section className="py-12 bg-gray-50">
+      <section className="content-section">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <Image
-              src="/images/equipment/medical-equipment.jpg"
-              alt="Quality durable medical equipment available at Anclote Pharmacy"
-              width={1200}
-              height={600}
-              className="rounded-xl shadow-lg w-full h-auto"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Main Content */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto mb-16 text-center">
-            <h2 className="text-3xl font-bold mb-6 text-gray-900">Complete DME Solutions</h2>
-            <p className="text-lg text-gray-600">
-              We provide a comprehensive range of durable medical equipment to help you manage your 
-              health conditions at home. Our knowledgeable staff will help you find the right equipment 
-              for your needs.
-            </p>
-          </div>
-
-          {/* Equipment Categories */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <div className="card">
-              <h3 className="text-xl font-bold mb-4 text-primary-700">Mobility Aids</h3>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Walkers and rollators</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Canes and crutches</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Wheelchairs and scooters</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Transfer equipment</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="card">
-              <h3 className="text-xl font-bold mb-4 text-primary-700">Bathroom Safety</h3>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Shower chairs and benches</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Raised toilet seats</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Grab bars and rails</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Bath lifts</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="card">
-              <h3 className="text-xl font-bold mb-4 text-primary-700">Daily Living Aids</h3>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Reachers and grabbers</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Dressing aids</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Eating utensils</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Personal care items</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="card">
-              <h3 className="text-xl font-bold mb-4 text-primary-700">Orthopedic Supplies</h3>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Braces and supports</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Compression stockings</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Orthopedic pillows</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Therapeutic cushions</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="card">
-              <h3 className="text-xl font-bold mb-4 text-primary-700">Diabetes Care</h3>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Blood glucose monitors</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Test strips and lancets</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Insulin supplies</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Diabetic footwear</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="card">
-              <h3 className="text-xl font-bold mb-4 text-primary-700">Respiratory Equipment</h3>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Nebulizers</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Oxygen concentrators</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">CPAP machines and supplies</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Pulse oximeters</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Features */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            <div className="card text-center">
-              <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <ShoppingBag className="w-8 h-8 text-primary-600" />
+          <div className="mx-auto max-w-5xl">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+              <div className="card">
+                <h2 className="compact-title">Mobility Equipment</h2>
+                <p className="body-copy">
+                  Wheelchairs, transport chairs, walkers, rollators, canes, and crutches. Available
+                  to purchase or rent. We fit the equipment to you in-store rather than handing over
+                  a box.
+                </p>
               </div>
-              <h3 className="text-lg font-bold mb-2 text-gray-900">Insurance Accepted</h3>
-              <p className="text-gray-600 text-sm">We work with Medicare and most insurance plans</p>
-            </div>
-            <div className="card text-center">
-              <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Headphones className="w-8 h-8 text-primary-600" />
+              <div className="card">
+                <h2 className="compact-title">CPAP and Respiratory Supplies</h2>
+                <p className="body-copy">
+                  CPAP masks, tubing, filters, humidifier chambers, and replacement parts. We stock
+                  common sizes and can order specialty items, usually within two business days.
+                </p>
               </div>
-              <h3 className="text-lg font-bold mb-2 text-gray-900">Expert Guidance</h3>
-              <p className="text-gray-600 text-sm">Our staff will help you choose the right equipment</p>
-            </div>
-            <div className="card text-center">
-              <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Heart className="w-8 h-8 text-primary-600" />
+              <div className="card">
+                <h2 className="compact-title">Diabetic Supplies</h2>
+                <p className="body-copy">
+                  Blood glucose meters, test strips, lancets, control solution, and diabetic
+                  footwear. We check your insurance coverage before you buy so there are no
+                  surprises.
+                </p>
               </div>
-              <h3 className="text-lg font-bold mb-2 text-gray-900">Quality Products</h3>
-              <p className="text-gray-600 text-sm">We stock only trusted, high-quality brands</p>
-            </div>
-            <div className="card text-center">
-              <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Accessibility className="w-8 h-8 text-primary-600" />
+              <div className="card">
+                <h2 className="compact-title">
+                  Bathroom Safety and Daily Living Aids
+                </h2>
+                <p className="body-copy">
+                  Shower chairs, grab bars, raised toilet seats, bed rails, and reachers. If you
+                  are setting up a home after a hospital discharge, call us and we will walk through
+                  what you need.
+                </p>
               </div>
-              <h3 className="text-lg font-bold mb-2 text-gray-900">Try Before You Buy</h3>
-              <p className="text-gray-600 text-sm">Test equipment to ensure proper fit and function</p>
+            </div>
+
+            <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-3">
+              <div className="card text-center">
+                <div className="feature-icon mx-auto">
+                  <ShoppingBag className="h-8 w-8 text-primary-600" />
+                </div>
+                <h3 className="mb-2 text-xl font-semibold text-slate-950">Insurance and Medicare Coverage</h3>
+                <p className="body-copy">
+                  We review plan requirements before ordering so you know what is covered and what
+                  documentation may be needed.
+                </p>
+              </div>
+              <div className="card text-center">
+                <div className="feature-icon mx-auto">
+                  <Accessibility className="h-8 w-8 text-primary-600" />
+                </div>
+                <h3 className="mb-2 text-xl font-semibold text-slate-950">In-Store Fitting Help</h3>
+                <p className="body-copy">
+                  Our team helps size and adjust many products so you leave with equipment that
+                  feels usable right away.
+                </p>
+              </div>
+              <div className="card text-center">
+                <div className="feature-icon mx-auto">
+                  <Heart className="h-8 w-8 text-primary-600" />
+                </div>
+                <h3 className="mb-2 text-xl font-semibold text-slate-950">Local Support</h3>
+                <p className="body-copy">
+                  Questions after purchase are handled by the same local pharmacy team, not a
+                  national call center.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-12 dark-panel">
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-[1fr_auto] md:items-center">
+                <div>
+                  <h2 className="mb-3 text-3xl font-semibold">Need help finding the right equipment?</h2>
+                  <p className="text-slate-300">
+                    Call before you come in and we can review your insurance coverage, stock status,
+                    and whether a prescription is needed.
+                  </p>
+                </div>
+                <a
+                  href="tel:727-944-5800"
+                  className="btn-secondary gap-2"
+                >
+                  <Phone className="mr-2 h-5 w-5" />
+                  Call 727-944-5800
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 bg-primary-700 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Need Medical Equipment?</h2>
-          <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-            Visit us or call to discuss your needs with our knowledgeable staff
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="bg-white text-primary-700 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-all">
-              Visit Us
-            </Link>
-            <a href="tel:(727) 944-5800" className="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-primary-700 transition-all flex items-center justify-center">
-              <Phone className="w-5 h-5 mr-2" />
-              (727) 944-5800
-            </a>
+      <section className="muted-band">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="section-title text-center">Equipment FAQs</h2>
+            <div className="space-y-6">
+              {faqs.map((faq) => (
+                <div key={faq.question} className="card">
+                  <div className="mb-2 flex items-start">
+                    <Shield className="mr-2 mt-1 h-5 w-5 flex-shrink-0 text-primary-600" />
+                    <h3 className="text-xl font-semibold text-slate-950">{faq.question}</h3>
+                  </div>
+                  <p className="body-copy">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-10 text-center">
+              <Link
+                href="/contact"
+                className="btn-primary"
+              >
+                Contact Our Equipment Team
+              </Link>
+            </div>
           </div>
         </div>
       </section>
     </>
   )
 }
-

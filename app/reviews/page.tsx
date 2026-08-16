@@ -27,11 +27,11 @@ export default function ReviewsPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-600 to-primary-800 text-white py-20">
+      <section className="page-hero">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Leave a Review</h1>
-            <p className="text-xl text-primary-100 mb-8">
+            <h1 className="page-heading">Leave a Review</h1>
+            <p className="page-intro mb-8">
               Share your experience with Anclote Pharmacy
             </p>
           </div>
@@ -39,15 +39,15 @@ export default function ReviewsPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-20">
+      <section className="content-section">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <div className="card mb-12">
-              <h2 className="text-2xl font-bold mb-6 text-gray-900">Submit Your Review</h2>
+              <h2 className="compact-title mb-6">Submit Your Review</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="name" className="form-label">
                       Your Name *
                     </label>
                     <input
@@ -57,12 +57,12 @@ export default function ReviewsPage() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary-500 focus:outline-none text-gray-900"
+                      className="form-control"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="email" className="form-label">
                       Email Address
                     </label>
                     <input
@@ -71,13 +71,13 @@ export default function ReviewsPage() {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary-500 focus:outline-none text-gray-900"
+                      className="form-control"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="rating" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="rating" className="form-label">
                     Rating *
                   </label>
                   <select
@@ -86,7 +86,7 @@ export default function ReviewsPage() {
                     value={formData.rating}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary-500 focus:outline-none text-gray-900"
+                    className="form-control"
                   >
                     <option value="5">⭐⭐⭐⭐⭐ (5 stars)</option>
                     <option value="4">⭐⭐⭐⭐ (4 stars)</option>
@@ -97,7 +97,7 @@ export default function ReviewsPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="review" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="review" className="form-label">
                     Your Review *
                   </label>
                   <textarea
@@ -107,7 +107,7 @@ export default function ReviewsPage() {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary-500 focus:outline-none text-gray-900"
+                    className="form-control"
                     placeholder="Tell us about your experience..."
                   />
                 </div>
@@ -123,9 +123,9 @@ export default function ReviewsPage() {
             </div>
 
             {/* External Review Links */}
-            <div className="card bg-primary-50 border-2 border-primary-200">
-              <h3 className="text-xl font-bold mb-4 text-gray-900">Leave a Review on Other Platforms</h3>
-              <p className="text-gray-600 mb-6">
+            <div className="card tint-panel">
+              <h3 className="text-xl font-semibold mb-4 text-slate-950">Leave a Review on Other Platforms</h3>
+              <p className="body-copy mb-6">
                 Help others find us by leaving a review on popular platforms:
               </p>
               <div className="flex flex-col sm:flex-row gap-4">

@@ -42,11 +42,11 @@ export default function RefillPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-600 to-primary-800 text-white py-20">
+      <section className="page-hero">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Refill Your Prescription</h1>
-            <p className="text-xl text-primary-100 mb-8">
+            <h1 className="page-heading">Refill Your Prescription</h1>
+            <p className="page-intro mb-8">
               Quick and easy prescription refill requests online
             </p>
           </div>
@@ -54,46 +54,46 @@ export default function RefillPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-20">
+      <section className="content-section">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Info Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
               <div className="card text-center">
-                <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="feature-icon mx-auto">
                   <Package className="w-8 h-8 text-primary-600" />
                 </div>
-                <h3 className="font-bold text-lg mb-2 text-gray-900">Submit Request</h3>
-                <p className="text-gray-600 text-sm">Fill out the form below with your prescription information</p>
+                <h3 className="font-semibold text-lg mb-2 text-slate-950">Submit Request</h3>
+                <p className="text-slate-600 text-sm">Fill out the form below with your prescription information</p>
               </div>
 
               <div className="card text-center">
-                <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="feature-icon mx-auto">
                   <Phone className="w-8 h-8 text-primary-600" />
                 </div>
-                <h3 className="font-bold text-lg mb-2 text-gray-900">We&apos;ll Prepare It</h3>
-                <p className="text-gray-600 text-sm">Our team will process your refill and call when ready</p>
+                <h3 className="font-semibold text-lg mb-2 text-slate-950">We&apos;ll Prepare It</h3>
+                <p className="text-slate-600 text-sm">Our team will process your refill and call when ready</p>
               </div>
 
               <div className="card text-center">
-                <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="feature-icon mx-auto">
                   <CheckCircle className="w-8 h-8 text-primary-600" />
                 </div>
-                <h3 className="font-bold text-lg mb-2 text-gray-900">Pick It Up</h3>
-                <p className="text-gray-600 text-sm">Come by during business hours to collect your medication</p>
+                <h3 className="font-semibold text-lg mb-2 text-slate-950">Pick It Up</h3>
+                <p className="text-slate-600 text-sm">Come by during business hours to collect your medication</p>
               </div>
             </div>
 
             {/* Refill Form */}
             <div className="card">
-              <h2 className="text-2xl font-bold mb-6 text-gray-900">Prescription Refill Form</h2>
+              <h2 className="compact-title mb-6">Prescription Refill Form</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Personal Information */}
                 <div>
-                  <h3 className="text-lg font-bold mb-4 text-gray-900">Personal Information</h3>
+                  <h3 className="text-lg font-semibold mb-4 text-slate-950">Personal Information</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="firstName" className="form-label">
                         First Name *
                       </label>
                       <input
@@ -103,13 +103,13 @@ export default function RefillPage() {
                         value={formData.firstName}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary-500 focus:outline-none text-gray-900"
+                        className="form-control"
                         placeholder="John"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="lastName" className="form-label">
                         Last Name *
                       </label>
                       <input
@@ -119,13 +119,13 @@ export default function RefillPage() {
                         value={formData.lastName}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary-500 focus:outline-none text-gray-900"
+                        className="form-control"
                         placeholder="Doe"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="dateOfBirth" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="dateOfBirth" className="form-label">
                         Date of Birth *
                       </label>
                       <input
@@ -135,12 +135,12 @@ export default function RefillPage() {
                         value={formData.dateOfBirth}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary-500 focus:outline-none text-gray-900"
+                        className="form-control"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="phone" className="form-label">
                         Phone Number *
                       </label>
                       <input
@@ -150,14 +150,14 @@ export default function RefillPage() {
                         value={formData.phone}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary-500 focus:outline-none text-gray-900"
+                        className="form-control"
                         placeholder="(123) 456-7890"
                       />
                     </div>
                   </div>
 
                   <div className="mt-6">
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="email" className="form-label">
                       Email Address (optional)
                     </label>
                     <input
@@ -166,7 +166,7 @@ export default function RefillPage() {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary-500 focus:outline-none text-gray-900"
+                      className="form-control"
                       placeholder="john@example.com"
                     />
                   </div>
@@ -174,10 +174,10 @@ export default function RefillPage() {
 
                 {/* Prescription Information */}
                 <div>
-                  <h3 className="text-lg font-bold mb-4 text-gray-900">Prescription Information</h3>
+                  <h3 className="text-lg font-semibold mb-4 text-slate-950">Prescription Information</h3>
                   <div className="space-y-6">
                     <div>
-                      <label htmlFor="rxNumber" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="rxNumber" className="form-label">
                         Prescription (Rx) Number *
                       </label>
                       <input
@@ -187,16 +187,16 @@ export default function RefillPage() {
                         value={formData.rxNumber}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary-500 focus:outline-none text-gray-900"
+                        className="form-control"
                         placeholder="Enter Rx number from your prescription label"
                       />
-                      <p className="text-sm text-gray-500 mt-2">
+                      <p className="text-sm text-slate-500 mt-2">
                         The Rx number can be found on your prescription bottle label
                       </p>
                     </div>
 
                     <div>
-                      <label htmlFor="additionalRx" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="additionalRx" className="form-label">
                         Additional Prescription Numbers (optional)
                       </label>
                       <input
@@ -205,13 +205,13 @@ export default function RefillPage() {
                         name="additionalRx"
                         value={formData.additionalRx}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary-500 focus:outline-none text-gray-900"
+                        className="form-control"
                         placeholder="Separate multiple Rx numbers with commas"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="pickupDate" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="pickupDate" className="form-label">
                         Preferred Pickup Date
                       </label>
                       <input
@@ -220,12 +220,12 @@ export default function RefillPage() {
                         name="pickupDate"
                         value={formData.pickupDate}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary-500 focus:outline-none text-gray-900"
+                        className="form-control"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="instructions" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="instructions" className="form-label">
                         Special Instructions or Questions (optional)
                       </label>
                       <textarea
@@ -234,7 +234,7 @@ export default function RefillPage() {
                         value={formData.instructions}
                         onChange={handleChange}
                         rows={4}
-                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary-500 focus:outline-none text-gray-900"
+                        className="form-control"
                         placeholder="Any special requests or questions about your prescription"
                       />
                     </div>
@@ -242,8 +242,8 @@ export default function RefillPage() {
                 </div>
 
                 {/* Submit Button */}
-                <div className="bg-primary-50 border-2 border-primary-200 rounded-lg p-6">
-                  <p className="text-sm text-gray-700 mb-4">
+                <div className="tint-panel rounded-2xl p-6">
+                  <p className="text-sm text-slate-700 mb-4">
                     By submitting this form, you authorize Anclote Pharmacy to refill the prescription(s) 
                     listed above. We will contact you when your prescription is ready for pickup.
                   </p>
@@ -260,8 +260,8 @@ export default function RefillPage() {
             {/* Alternative Options */}
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="card">
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Call for Refill</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-xl font-semibold mb-3 text-slate-950">Call for Refill</h3>
+                <p className="body-copy mb-4">
                   Prefer to speak with someone? Call us to request your refill.
                 </p>
                 <a 
@@ -274,8 +274,8 @@ export default function RefillPage() {
               </div>
 
               <div className="card">
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Transfer Prescription</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-xl font-semibold mb-3 text-slate-950">Transfer Prescription</h3>
+                <p className="body-copy mb-4">
                   Moving your prescription from another pharmacy?
                 </p>
                 <a 

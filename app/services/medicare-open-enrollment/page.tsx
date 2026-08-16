@@ -1,209 +1,122 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
-import { FileText, HelpCircle, DollarSign, CheckCircle, Calendar, Users } from 'lucide-react'
+import { Calendar, CheckCircle, Phone, Shield, Users } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Medicare Open Enrollment Help | Tarpon Springs Pharmacy',
+  description:
+    'Free Medicare Part D plan reviews in Tarpon Springs. Compare plans and check drug coverage before you enroll. Call 727-944-5800.',
+}
+
+const whatToBring = [
+  'Your Medicare card',
+  'Your current Part D or Advantage plan card',
+  'A list of all medications you take, including doses',
+  "Your preferred pharmacy, if it isn't us",
+]
 
 export default function MedicareOpenEnrollmentPage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-600 to-primary-800 text-white py-20">
+      <section className="page-hero">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Medicare Open Enrollment</h1>
-            <p className="text-xl text-primary-100 mb-8">
-              Expert guidance to help you choose the best Medicare plan for your needs
+            <div className="page-eyebrow">
+              Free Medicare plan reviews in Tarpon Springs
+            </div>
+            <h1 className="page-heading">
+              Medicare Open Enrollment Help in Tarpon Springs
+            </h1>
+            <p className="page-intro">
+              Compare Medicare Part D options with a local pharmacy team that looks at your real
+              medication list, not a generic estimate.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Main Content */}
-      <section className="py-20">
+      <section className="content-section">
         <div className="container mx-auto px-4">
-          {/* Enrollment Period Banner */}
-          <div className="bg-accent-500 text-white rounded-xl p-6 md:p-8 mb-16 text-center">
-            <Calendar className="w-12 h-12 mx-auto mb-4" />
-            <h2 className="text-2xl md:text-3xl font-bold mb-2">Annual Enrollment Period</h2>
-            <p className="text-lg mb-2">October 15 - December 7</p>
-            <p>Coverage begins January 1 of the following year</p>
-          </div>
-
-          <div className="max-w-3xl mx-auto mb-16 text-center">
-            <h2 className="text-3xl font-bold mb-6 text-gray-900">We&apos;re Here to Help</h2>
-            <p className="text-lg text-gray-600">
-              Choosing a Medicare plan can be confusing. Our pharmacists and staff are trained to help 
-              you understand your options and find a plan that covers your medications and fits your budget.
-            </p>
-          </div>
-
-          {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            <div className="card">
-              <div className="bg-primary-100 w-16 h-16 rounded-lg flex items-center justify-center mb-4">
-                <Users className="w-8 h-8 text-primary-600" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900">Free Consultation</h3>
-              <p className="text-gray-600 mb-4">
-                Schedule a free, no-obligation consultation with our Medicare experts:
+          <div className="mx-auto max-w-5xl">
+            <div className="rounded-[32px] bg-accent-500 p-8 text-center text-white shadow-xl">
+              {/* Update these dates each year before the next Medicare open enrollment season begins. */}
+              <Calendar className="mx-auto mb-4 h-12 w-12" />
+              <h2 className="mb-3 text-3xl font-semibold">Key Medicare Enrollment Dates</h2>
+              <p className="text-lg">
+                For the 2026 Medicare open enrollment period, dates are October 15, 2026 through
+                December 7, 2026.
               </p>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Review your current medications</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Compare available plans</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Calculate total medication costs</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Personalized recommendations</span>
-                </li>
-              </ul>
             </div>
 
-            <div className="card">
-              <div className="bg-primary-100 w-16 h-16 rounded-lg flex items-center justify-center mb-4">
-                <DollarSign className="w-8 h-8 text-primary-600" />
+            <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
+              <div className="card">
+                <div className="feature-icon">
+                  <Users className="h-8 w-8 text-primary-600" />
+                </div>
+                <h2 className="compact-title">Free Plan Comparison Reviews</h2>
+                <p className="body-copy">
+                  We compare plans available in Pinellas and Pasco counties using your actual
+                  prescriptions so you can see how formularies, premiums, and pharmacy networks
+                  change your yearly costs.
+                </p>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900">Cost Analysis</h3>
-              <p className="text-gray-600 mb-4">
-                We&apos;ll help you understand the true cost of each plan:
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Monthly premiums</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Deductibles and copays</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">Coverage gap (&quot;donut hole&quot;)</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Annual out-of-pocket maximum</span>
-                </li>
-              </ul>
+              <div className="card">
+                <div className="feature-icon">
+                  <Shield className="h-8 w-8 text-primary-600" />
+                </div>
+                <h2 className="compact-title">Why Review Your Plan Every Year</h2>
+                <p className="body-copy">
+                  Part D plans change their drug formularies, premiums, and preferred pharmacies
+                  each year. A plan that covered your medications last year may not cover them at
+                  the same cost this year. We compare your current plan against available
+                  alternatives and show what each option would cost you over the full year.
+                </p>
+              </div>
             </div>
 
-            <div className="card">
-              <div className="bg-primary-100 w-16 h-16 rounded-lg flex items-center justify-center mb-4">
-                <FileText className="w-8 h-8 text-primary-600" />
+            <div className="mt-12 tint-panel">
+              <h2 className="mb-6 text-3xl font-semibold text-slate-950">What to Bring to Your Appointment</h2>
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                {whatToBring.map((item) => (
+                  <div key={item} className="flex items-start rounded-2xl bg-white p-5 shadow-sm">
+                    <CheckCircle className="mr-3 mt-0.5 h-5 w-5 flex-shrink-0 text-primary-600" />
+                    <span className="body-copy">{item}</span>
+                  </div>
+                ))}
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900">Formulary Review</h3>
-              <p className="text-gray-600 mb-4">
-                We&apos;ll check if your medications are covered:
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Medication tier levels</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Prior authorization requirements</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Quantity limits</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Preferred pharmacy networks</span>
-                </li>
-              </ul>
             </div>
 
-            <div className="card">
-              <div className="bg-primary-100 w-16 h-16 rounded-lg flex items-center justify-center mb-4">
-                <HelpCircle className="w-8 h-8 text-primary-600" />
+            <div className="mt-12 dark-panel md:p-12">
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-[1fr_auto] md:items-center">
+                <div>
+                  <h2 className="mb-4 text-3xl font-semibold">Book Your Review</h2>
+                  <p className="text-slate-300">
+                    Call 727-944-5800 to schedule your plan review. Appointments during open
+                    enrollment fill quickly, so book early. Reviews are free and there is no
+                    obligation to change plans.
+                  </p>
+                </div>
+                <a
+                  href="tel:727-944-5800"
+                  className="btn-secondary gap-2"
+                >
+                  <Phone className="mr-2 h-5 w-5" />
+                  Call 727-944-5800
+                </a>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900">Ongoing Support</h3>
-              <p className="text-gray-600 mb-4">
-                Our support doesn&apos;t end after enrollment:
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Answer questions year-round</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Help with plan changes</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Assist with appeals</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Annual plan review</span>
-                </li>
-              </ul>
+            </div>
+
+            <div className="mt-10 text-center">
+              <Link
+                href="/contact"
+                className="btn-primary"
+              >
+                Contact Our Team
+              </Link>
             </div>
           </div>
-
-          {/* What to Bring */}
-          <div className="bg-primary-50 rounded-2xl p-8 md:p-12">
-            <h3 className="text-3xl font-bold mb-8 text-center text-gray-900">What to Bring to Your Consultation</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              <div className="bg-white rounded-lg p-6">
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">List of current medications</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">Current Medicare card</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">Current prescription plan information</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="bg-white rounded-lg p-6">
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">List of preferred pharmacies</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">List of doctors and specialists</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-primary-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">Any plan comparison materials</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-16 bg-primary-700 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Schedule Your Free Medicare Consultation</h2>
-          <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-            Don&apos;t navigate Medicare alone. Let our experts help you find the right plan.
-          </p>
-          <Link href="/contact" className="inline-block bg-white text-primary-700 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-all">
-            Book Consultation
-          </Link>
         </div>
       </section>
     </>
   )
 }
-

@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react'
 
 export default function ContactPage() {
@@ -29,26 +28,14 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero Section with Background */}
-      <section className="relative bg-gradient-to-br from-primary-600 to-primary-800 text-white py-20 overflow-hidden">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/hero/contact-hero.jpg"
-            alt="Contact Anclote Pharmacy"
-            fill
-            className="object-cover opacity-15"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-600/95 to-primary-800/95"></div>
-        </div>
-        <div className="absolute top-20 right-10 w-64 h-64 bg-primary-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-        <div className="absolute bottom-20 left-10 w-64 h-64 bg-accent-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+      <section className="page-hero">
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
-            <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold mb-6 border border-white/30">
-              📞 Get In Touch
+            <div className="page-eyebrow">
+              Get in touch
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">Contact Us</h1>
-            <p className="text-xl text-primary-50 mb-8 drop-shadow-md">
+            <h1 className="page-heading">Contact Us</h1>
+            <p className="page-intro mb-8">
               We&apos;re here to help! Reach out to us with any questions or concerns.
             </p>
           </div>
@@ -56,14 +43,14 @@ export default function ContactPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-20">
+      <section className="content-section">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-2xl font-bold mb-6 text-gray-900">Get in Touch</h2>
-                <p className="text-gray-600 mb-6">
+                <h2 className="compact-title mb-6">Get in Touch</h2>
+                <p className="body-copy mb-6">
                   Visit us in person, give us a call, or send us a message. We&apos;re happy to assist you 
                   with all your pharmacy and healthcare needs.
                 </p>
@@ -73,8 +60,8 @@ export default function ContactPage() {
                 <div className="flex items-start mb-4">
                   <MapPin className="w-6 h-6 text-primary-600 mr-3 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-bold text-lg mb-1 text-gray-900">Location</h3>
-                    <p className="text-gray-600">
+                    <h3 className="font-semibold text-lg mb-1 text-slate-950">Location</h3>
+                    <p className="body-copy">
                       1933 N Pinellas Ave<br />
                       Tarpon Springs, FL 34689
                     </p>
@@ -86,7 +73,7 @@ export default function ContactPage() {
                 <div className="flex items-start mb-4">
                   <Phone className="w-6 h-6 text-primary-600 mr-3 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-bold text-lg mb-1 text-gray-900">Phone</h3>
+                    <h3 className="font-semibold text-lg mb-1 text-slate-950">Phone</h3>
                     <a href="tel:727-944-5800" className="text-primary-600 hover:text-primary-700 block">
                       (727) 944-5800
                     </a>
@@ -98,7 +85,7 @@ export default function ContactPage() {
                 <div className="flex items-start mb-4">
                   <Mail className="w-6 h-6 text-primary-600 mr-3 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-bold text-lg mb-1 text-gray-900">Email</h3>
+                    <h3 className="font-semibold text-lg mb-1 text-slate-950">Email</h3>
                     <a href="mailto:info@anclotepharmacy.com" className="text-primary-600 hover:text-primary-700">
                       info@anclotepharmacy.com
                     </a>
@@ -110,8 +97,8 @@ export default function ContactPage() {
                 <div className="flex items-start mb-4">
                   <Clock className="w-6 h-6 text-primary-600 mr-3 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-bold text-lg mb-2 text-gray-900">Hours</h3>
-                    <div className="space-y-1 text-gray-600 text-sm">
+                    <h3 className="font-semibold text-lg mb-2 text-slate-950">Hours</h3>
+                    <div className="space-y-1 text-slate-600 text-sm">
                       <div className="flex justify-between">
                         <span className="font-medium">Monday - Friday:</span>
                         <span>9:00am - 5:00pm</span>
@@ -133,11 +120,11 @@ export default function ContactPage() {
             {/* Contact Form */}
             <div className="lg:col-span-2">
               <div className="card">
-                <h2 className="text-2xl font-bold mb-6 text-gray-900">Send Us a Message</h2>
+                <h2 className="compact-title mb-6">Send Us a Message</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="name" className="form-label">
                         Full Name *
                       </label>
                       <input
@@ -147,13 +134,13 @@ export default function ContactPage() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary-500 focus:outline-none text-gray-900"
+                        className="form-control"
                         placeholder="John Doe"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="email" className="form-label">
                         Email Address *
                       </label>
                       <input
@@ -163,7 +150,7 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary-500 focus:outline-none text-gray-900"
+                        className="form-control"
                         placeholder="john@example.com"
                       />
                     </div>
@@ -171,7 +158,7 @@ export default function ContactPage() {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="phone" className="form-label">
                         Phone Number
                       </label>
                       <input
@@ -180,13 +167,13 @@ export default function ContactPage() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary-500 focus:outline-none text-gray-900"
+                        className="form-control"
                         placeholder="(123) 456-7890"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="subject" className="form-label">
                         Subject *
                       </label>
                       <select
@@ -195,7 +182,7 @@ export default function ContactPage() {
                         value={formData.subject}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary-500 focus:outline-none text-gray-900"
+                        className="form-control"
                       >
                         <option value="">Select a subject</option>
                         <option value="general">General Inquiry</option>
@@ -211,7 +198,7 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="message" className="form-label">
                       Message *
                     </label>
                     <textarea
@@ -221,7 +208,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required
                       rows={6}
-                      className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary-500 focus:outline-none text-gray-900"
+                      className="form-control"
                       placeholder="How can we help you?"
                     />
                   </div>
@@ -240,10 +227,10 @@ export default function ContactPage() {
 
           {/* Map Section */}
           <div className="mt-16">
-            <h2 className="text-3xl font-bold mb-8 text-center text-gray-900">Find Us</h2>
+            <h2 className="section-title text-center">Find Us</h2>
             <div className="card overflow-hidden">
-              <div className="bg-gray-200 h-96 flex items-center justify-center">
-                <div className="text-center text-gray-600">
+              <div className="bg-slate-100 h-96 flex items-center justify-center">
+                <div className="text-center text-slate-600">
                   <MapPin className="w-16 h-16 mx-auto mb-4" />
                   <p className="font-semibold mb-2">1933 N Pinellas Ave</p>
                   <p>Tarpon Springs, FL 34689</p>
@@ -264,4 +251,3 @@ export default function ContactPage() {
     </>
   )
 }
-

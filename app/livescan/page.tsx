@@ -1,344 +1,202 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
-import Image from 'next/image'
-import { Fingerprint, Clock, Shield, CheckCircle, DollarSign, Phone, FileText } from 'lucide-react'
+import { CheckCircle, Clock, DollarSign, FileText, Fingerprint, Phone, Shield } from 'lucide-react'
+import SuncoastLiveScanPortal from '@/components/SuncoastLiveScanPortal'
+
+export const metadata: Metadata = {
+  title: 'LiveScan Fingerprinting Services | Tarpon Springs, FL',
+  description:
+    'AHCA, FDLE and FD-258 fingerprinting in Tarpon Springs. Fast electronic submission for healthcare and employment screening. Call 727-944-5800.',
+}
+
+const faqs = [
+  {
+    question: 'How much does LiveScan fingerprinting cost?',
+    answer: 'LiveScan fingerprinting is $95 without a photo and $120 with photos.',
+  },
+  {
+    question: 'Do I need an appointment?',
+    answer: 'Appointments are recommended. Use the scheduling link on this page or call 727-944-5800.',
+  },
+  {
+    question: 'What do I need to bring?',
+    answer: 'A valid government-issued photo ID and your ORI number or agency information.',
+  },
+  {
+    question: 'How long do results take?',
+    answer: 'Most electronic submissions process within 24 to 72 hours depending on the agency.',
+  },
+  {
+    question: 'Do you provide FD-258 cards?',
+    answer: 'Yes. FD-258 ink cards are completed in-store and given to you the same visit.',
+  },
+  {
+    question: 'Can you fingerprint for ATF applications?',
+    answer: 'Yes. We provide FD-258 cards accepted for ATF eForm submissions.',
+  },
+]
 
 export default function LiveScanPage() {
   return (
     <>
-      {/* Hero Section with Background */}
-      <section className="relative bg-gradient-to-br from-accent-500 to-accent-700 text-white py-20 overflow-hidden">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/hero/livescan-hero.jpg"
-            alt="LiveScan fingerprinting services"
-            fill
-            className="object-cover opacity-15"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-accent-500/95 to-accent-700/95"></div>
-        </div>
-        <div className="absolute top-20 right-10 w-64 h-64 bg-accent-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-        <div className="absolute bottom-20 left-10 w-64 h-64 bg-primary-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl">
-            <div className="inline-block bg-white text-accent-600 px-4 py-2 rounded-full text-sm font-bold mb-6 border-2 border-white/30">
-              ✋ NOW AVAILABLE
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">LiveScan Fingerprinting Services</h1>
-            <p className="text-xl text-accent-50 mb-8 drop-shadow-md">
-              Fast, secure, and convenient fingerprinting for background checks, licensing, and employment
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a 
-                href="https://www.suncoastlivescan.net/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-block bg-white text-accent-700 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 hover:scale-105 transition-all shadow-xl text-center"
-              >
-                Schedule Online →
-              </a>
-              <a href="tel:727-944-5800" className="inline-block bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-accent-700 hover:scale-105 transition-all backdrop-blur-sm text-center">
-                Call: (727) 944-5800
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Main Content */}
-      <section className="py-20">
+      <section className="page-hero">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto mb-16 text-center">
-            <h2 className="text-3xl font-bold mb-6 text-gray-900">Professional LiveScan Services</h2>
-            <p className="text-lg text-gray-600 mb-6">
-              Anclote Pharmacy partners with Suncoast Livescan to provide LiveScan electronic fingerprinting services. 
-              Our certified technicians provide fast, accurate digital fingerprinting for various background check 
-              requirements.
+          <div className="max-w-4xl">
+            <div className="page-eyebrow">
+              LiveScan fingerprinting in Tarpon Springs
+            </div>
+            <h1 className="page-heading">
+              LiveScan Fingerprinting in Tarpon Springs
+            </h1>
+            <p className="page-intro">
+              AHCA, FDLE, and FD-258 fingerprinting for healthcare, employment, licensing, and
+              background screening needs.
             </p>
-            <a 
-              href="https://www.suncoastlivescan.net/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-block bg-accent-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-accent-700 transition-all shadow-lg"
-            >
-              Visit Suncoast Livescan Website →
-            </a>
-          </div>
-
-          {/* Why Choose LiveScan */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            <div className="card text-center">
-              <div className="bg-accent-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-8 h-8 text-accent-600" />
-              </div>
-              <h3 className="text-lg font-bold mb-2 text-gray-900">Fast Results</h3>
-              <p className="text-gray-600 text-sm">Electronic submission for quicker processing times</p>
-            </div>
-
-            <div className="card text-center">
-              <div className="bg-accent-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-accent-600" />
-              </div>
-              <h3 className="text-lg font-bold mb-2 text-gray-900">Secure & Accurate</h3>
-              <p className="text-gray-600 text-sm">Digital scanning ensures clear, reliable prints</p>
-            </div>
-
-            <div className="card text-center">
-              <div className="bg-accent-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Fingerprint className="w-8 h-8 text-accent-600" />
-              </div>
-              <h3 className="text-lg font-bold mb-2 text-gray-900">Certified Technicians</h3>
-              <p className="text-gray-600 text-sm">Trained and certified LiveScan operators</p>
-            </div>
-
-            <div className="card text-center">
-              <div className="bg-accent-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <DollarSign className="w-8 h-8 text-accent-600" />
-              </div>
-              <h3 className="text-lg font-bold mb-2 text-gray-900">Competitive Pricing</h3>
-              <p className="text-gray-600 text-sm">Affordable rates for all fingerprinting services</p>
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+              <a
+                href="#suncoast-livescan-portal"
+                className="btn-secondary"
+              >
+                Schedule Online
+              </a>
+              <a
+                href="tel:727-944-5800"
+                className="btn-secondary gap-2 border-white/15 bg-white/10 text-white hover:border-white/30 hover:bg-white/15 hover:text-white"
+              >
+                <Phone className="mr-2 h-5 w-5" />
+                Call 727-944-5800
+              </a>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Services We Provide */}
-          <div className="mb-16">
-            <h3 className="text-3xl font-bold mb-8 text-center text-gray-900">Who Needs LiveScan?</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="card">
-                <h4 className="font-bold text-lg mb-3 text-accent-700">Employment</h4>
-                <ul className="space-y-2 text-gray-600">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-accent-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Pre-employment screening</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-accent-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Government positions</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-accent-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Healthcare workers</span>
-                  </li>
-                </ul>
-              </div>
+      <SuncoastLiveScanPortal />
 
-              <div className="card">
-                <h4 className="font-bold text-lg mb-3 text-accent-700">Licensing</h4>
-                <ul className="space-y-2 text-gray-600">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-accent-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Professional licenses</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-accent-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Real estate agents</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-accent-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Security guards</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="card">
-                <h4 className="font-bold text-lg mb-3 text-accent-700">Education</h4>
-                <ul className="space-y-2 text-gray-600">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-accent-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Teachers and staff</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-accent-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>School volunteers</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-accent-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Substitute teachers</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="card">
-                <h4 className="font-bold text-lg mb-3 text-accent-700">Adoption & Foster Care</h4>
-                <ul className="space-y-2 text-gray-600">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-accent-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Adoption applications</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-accent-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Foster parent certification</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-accent-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Home studies</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="card">
-                <h4 className="font-bold text-lg mb-3 text-accent-700">Immigration</h4>
-                <ul className="space-y-2 text-gray-600">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-accent-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Visa applications</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-accent-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Citizenship requirements</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-accent-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Green card applications</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="card">
-                <h4 className="font-bold text-lg mb-3 text-accent-700">Other Services</h4>
-                <ul className="space-y-2 text-gray-600">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-accent-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Volunteer organizations</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-accent-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Court-ordered fingerprinting</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-accent-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Military service</span>
-                  </li>
-                </ul>
-              </div>
+      <section className="content-section">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-5xl">
+            <div className="mb-12 text-center">
+              <h2 className="section-title">Who Needs LiveScan Fingerprinting</h2>
+              <p className="section-subtitle mt-4">
+                We help healthcare workers, employers, licensing applicants, and other professionals
+                who need fingerprinting processed quickly and accurately.
+              </p>
             </div>
-          </div>
 
-          {/* Process */}
-          <div className="bg-accent-50 rounded-2xl p-8 md:p-12 mb-16">
-            <h3 className="text-3xl font-bold mb-8 text-center text-gray-900">How It Works</h3>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="bg-accent-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                  1
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+              <div className="card">
+                <div className="feature-icon-accent">
+                  <Shield className="h-8 w-8 text-accent-600" />
                 </div>
-                <h4 className="font-bold text-lg mb-2 text-gray-900">Schedule Appointment</h4>
-                <p className="text-gray-600 text-sm">
-                  Call us to schedule your LiveScan appointment
+                <h2 className="compact-title">AHCA and Healthcare Screening</h2>
+                <p className="body-copy">
+                  We process AHCA Level 2 background screening for healthcare workers, including
+                  nurses, home health aides, assisted living staff, and medical office employees.
+                  Bring your AHCA ORI number to your appointment. Results are submitted
+                  electronically to FDLE and typically process within 24 to 72 hours.
                 </p>
               </div>
-              <div className="text-center">
-                <div className="bg-accent-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                  2
+              <div className="card">
+                <div className="feature-icon-accent">
+                  <Fingerprint className="h-8 w-8 text-accent-600" />
                 </div>
-                <h4 className="font-bold text-lg mb-2 text-gray-900">Bring Required Documents</h4>
-                <p className="text-gray-600 text-sm">
-                  Bring your ID and any required forms or codes
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="bg-accent-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                  3
-                </div>
-                <h4 className="font-bold text-lg mb-2 text-gray-900">Get Fingerprinted</h4>
-                <p className="text-gray-600 text-sm">
-                  Quick digital scan of your fingerprints
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="bg-accent-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                  4
-                </div>
-                <h4 className="font-bold text-lg mb-2 text-gray-900">Electronic Submission</h4>
-                <p className="text-gray-600 text-sm">
-                  Results sent electronically to the appropriate agency
+                <h2 className="compact-title">FD-258 Fingerprint Cards</h2>
+                <p className="body-copy">
+                  We provide FD-258 ink fingerprint cards for applications that require a physical
+                  card rather than electronic submission, including ATF eForm submissions,
+                  out-of-state licensing, and federal applications. Cards are completed in-store and
+                  given to you the same visit.
                 </p>
               </div>
             </div>
-          </div>
 
-          {/* What to Bring */}
-          <div className="max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold mb-8 text-center text-gray-900">What to Bring</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-3">
               <div className="card">
-                <div className="flex items-center mb-4">
-                  <FileText className="w-6 h-6 text-accent-600 mr-2" />
-                  <h4 className="font-bold text-xl text-gray-900">Required Items:</h4>
+                <div className="feature-icon-accent">
+                  <FileText className="h-8 w-8 text-accent-600" />
                 </div>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-accent-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">Valid photo ID (driver&apos;s license, passport, or state ID)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-accent-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">ORI number or agency information</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-accent-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">Any forms provided by your employer or agency</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-accent-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">Payment (cash, credit, or debit accepted)</span>
-                  </li>
-                </ul>
+                <h2 className="compact-title">What to Bring</h2>
+                <p className="body-copy">
+                  Bring a valid government-issued photo ID and your ORI number or agency
+                  information. If your employer or board gave you paperwork, bring that too.
+                </p>
               </div>
-
-              <div className="card bg-accent-600 text-white">
-                <div className="flex items-center mb-4">
-                  <Shield className="w-6 h-6 text-white mr-2" />
-                  <h4 className="font-bold text-xl">Important Information:</h4>
+              <div className="card">
+                <div className="feature-icon-accent">
+                  <DollarSign className="h-8 w-8 text-accent-600" />
                 </div>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-accent-200 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Appointments recommended but walk-ins welcome</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-accent-200 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Process typically takes 10-15 minutes</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-accent-200 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Results transmitted electronically</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-accent-200 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Results available via your requesting agency</span>
-                  </li>
-                </ul>
+                <h2 className="compact-title">Cost and Processing Time</h2>
+                <p className="body-copy">
+                  LiveScan fingerprinting is $95 without a photo and $120 with photos. Most
+                  electronic submissions are sent immediately after your appointment, and results are
+                  typically processed by the receiving agency within 24 to 72 hours.
+                </p>
+              </div>
+              <div className="card">
+                <div className="feature-icon-accent">
+                  <Clock className="h-8 w-8 text-accent-600" />
+                </div>
+                <h2 className="compact-title">Booking Options</h2>
+                <p className="body-copy">
+                  Appointments are recommended for the smoothest experience. You can schedule
+                  online through Suncoast Livescan or call us directly.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 bg-accent-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Schedule Your LiveScan Appointment?</h2>
-          <p className="text-xl text-accent-100 mb-8 max-w-2xl mx-auto">
-            Fast, secure, and convenient fingerprinting services available now
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="https://www.suncoastlivescan.net/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="bg-white text-accent-700 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-all flex items-center justify-center shadow-lg"
-            >
-              Schedule Online at Suncoast Livescan →
-            </a>
-            <a href="tel:727-944-5800" className="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-accent-700 transition-all flex items-center justify-center">
-              <Phone className="w-5 h-5 mr-2" />
-              Call: (727) 944-5800
-            </a>
+      <section className="muted-band">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="section-title text-center">Fingerprinting FAQs</h2>
+            <div className="space-y-6">
+              {faqs.map((faq) => (
+                <div key={faq.question} className="card">
+                  <div className="mb-2 flex items-start">
+                    <CheckCircle className="mr-2 mt-1 h-5 w-5 flex-shrink-0 text-accent-600" />
+                    <h3 className="text-xl font-semibold text-slate-950">{faq.question}</h3>
+                  </div>
+                  <p className="body-copy">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-10 dark-panel">
+              {/* Workbook note: pricing and turnaround should be confirmed with the client before publishing. */}
+              <h3 className="mb-3 text-2xl font-semibold">Ready to schedule?</h3>
+              <p className="text-slate-300">
+                Choose the online scheduler or call our team if you have questions about agency
+                requirements, ORI numbers, or card-based fingerprinting.
+              </p>
+              <div className="mt-6 flex flex-col gap-4 sm:flex-row">
+                <a
+                  href="#suncoast-livescan-portal"
+                  className="btn-secondary"
+                >
+                  Schedule Online
+                </a>
+                <a
+                  href="tel:727-944-5800"
+                  className="btn-secondary gap-2 border-white/15 bg-white/10 text-white hover:border-white/30 hover:bg-white/15 hover:text-white"
+                >
+                  <Phone className="mr-2 h-5 w-5" />
+                  Call 727-944-5800
+                </a>
+              </div>
+            </div>
+            <div className="mt-8 text-center">
+              <Link
+                href="/contact"
+                className="btn-primary"
+              >
+                Contact Us
+              </Link>
+            </div>
           </div>
         </div>
       </section>
     </>
   )
 }
-
