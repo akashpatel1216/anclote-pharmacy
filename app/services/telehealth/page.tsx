@@ -90,28 +90,53 @@ export default function TelehealthPage() {
               </div>
             </div>
 
-            <div className="mt-12 dark-panel">
-              <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center">
-                <div>
-                  <div className="mb-4 inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-primary-100">
-                    Telehealth provider resource
+            <div className="mt-12 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_22px_55px_-38px_rgba(15,35,55,0.45)]">
+              <div className="flex flex-col justify-between gap-5 border-b border-slate-200 bg-[#eaf6fb] p-6 md:flex-row md:items-center md:p-8">
+                <div className="max-w-2xl">
+                  <div className="mb-3 text-sm font-bold uppercase tracking-[0.16em] text-accent-700">
+                    Embedded telehealth provider profile
                   </div>
-                  <h2 className="mb-4 text-3xl font-semibold">Kinchit Shah MD FACP</h2>
-                  <p className="text-slate-300">
-                    Patients who need a telehealth doctor resource can visit Kinchit Shah MD FACP
-                    online, then ask that eligible prescriptions be sent to Anclote Pharmacy for
-                    local pharmacist support.
+                  <h2 className="text-3xl font-bold tracking-[-0.03em] text-[#14243b]">
+                    Kinchit Shah MD FACP
+                  </h2>
+                  <p className="mt-3 leading-7 text-slate-600">
+                    Review the provider profile and book below. Ask that eligible prescriptions be
+                    sent to Anclote Pharmacy for local pharmacist support after your visit.
                   </p>
                 </div>
                 <a
                   href="https://kinchitshahmd.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-secondary gap-2"
+                  className="btn-primary shrink-0 gap-2"
                 >
-                  Visit KinchitShahMD.com
+                  Open Full Website
                   <ExternalLink className="h-4 w-4" />
                 </a>
+              </div>
+
+              <div className="border-b border-slate-200 bg-slate-100 px-4 py-3">
+                <div className="mx-auto flex max-w-xl items-center gap-3 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-semibold text-slate-500 shadow-sm">
+                  <Shield className="h-4 w-4 text-primary-700" />
+                  kinchitshahmd.com
+                </div>
+              </div>
+
+              <iframe
+                src="/api/telehealth-provider"
+                title="Kinchit Shah MD telehealth provider website"
+                className="h-[640px] w-full bg-white md:h-[760px]"
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+              />
+
+              <div className="flex items-start gap-3 bg-[#fff4dc] p-5 text-sm leading-6 text-slate-700 md:px-8">
+                <Shield className="mt-0.5 h-5 w-5 shrink-0 text-primary-700" />
+                <p>
+                  Kinchit Shah MD is a separate provider website. Information submitted inside the
+                  embedded page is sent directly to that provider and is not collected by Anclote
+                  Pharmacy.
+                </p>
               </div>
             </div>
 

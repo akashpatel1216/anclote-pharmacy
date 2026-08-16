@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Newsreader, Source_Sans_3 } from 'next/font/google'
+import { Manrope, Source_Sans_3 } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
 import Header from '@/components/Header'
@@ -11,11 +11,10 @@ const bodyFont = Source_Sans_3({
   display: 'swap',
 })
 
-const displayFont = Newsreader({
+const displayFont = Manrope({
   subsets: ['latin'],
   variable: '--font-display',
   display: 'swap',
-  adjustFontFallback: false,
 })
 
 export const metadata: Metadata = {

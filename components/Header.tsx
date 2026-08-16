@@ -157,6 +157,13 @@ export default function Header() {
           )}
         </div>
       </header>
+      <Link
+        href="/services/delivery"
+        className="block bg-accent-700 px-4 py-3 text-center text-sm font-bold text-white transition-colors hover:bg-accent-800"
+      >
+        Local delivery, medication packaging, and pharmacist support, all in one place
+        <span className="ml-2 underline underline-offset-4">Explore delivery</span>
+      </Link>
     </>
   )
 }
